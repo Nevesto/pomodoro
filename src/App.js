@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Clock from './clock/Clock';
+import Header from './header/header';
+import Tasks from './tasklist/tasks';
+import { ClockProvider } from './clock/clockContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ClockProvider>
+      <div className="App">
+        <Header />
+        <Clock />
+        <Tasks />
+      </div>
+    </ClockProvider>
   );
 }
 

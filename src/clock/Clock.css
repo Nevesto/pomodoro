@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Gupter:wght@400;500;700&family=Playwrite+US+Modern:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 300px;
+    width: 500px;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    /* Glassmorphism effect */
+
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clock {
+    font-family: "Roboto Mono";
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 2.5rem;
+    z-index: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+button {
+    border: none;
+    border-radius: 1rem;
+    font-family: "Roboto Mono";
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 10);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c2c2c2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pomos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: "Roboto Mono";
+    color: white;
+}
+
+.pomos span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.pomos h4 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 400;
+}
