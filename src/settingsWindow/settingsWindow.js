@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useClock } from '../clock/clockContext';
 import './settingsWindow.css';
+import { IoClose } from "react-icons/io5";
 
 function SettingsWindow({ closeSettings }) {
     const { settings, updateSettings } = useClock();
@@ -23,6 +24,7 @@ function SettingsWindow({ closeSettings }) {
         <div className="settingsWindow">
             <div className="settings">
                 <h2>Settings</h2>
+                <button className='button' onClick={closeSettings}><IoClose size={32} className='x' color=''/></button>
                 <div className="setting">
                     <label>Pomo Times</label>
                     <input 
@@ -55,7 +57,7 @@ function SettingsWindow({ closeSettings }) {
                         onChange={(e) => setLongBreak(e.target.value)}
                     />
                 </div>
-                <button onClick={handleSave}>Save</button>
+                <button className='btn-2' onClick={handleSave}>Save</button>
             </div>
         </div>
     );

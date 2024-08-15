@@ -14,10 +14,10 @@ function Header() {
     }
 
     return (
-        <header>
-            <button onClick={openSettings}>Settings</button>
+        <div className="header">
+            <button onClick={openSettings} className="header-settings-btn">Settings</button>
             {showSettings && <SettingsWindow closeSettings={closeSettings} />}
-        </header>
+        </div>
     )
 }
 

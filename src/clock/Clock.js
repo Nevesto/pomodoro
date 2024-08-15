@@ -10,6 +10,10 @@ function Clock() {
     const [isWorkTime, setIsWorkTime] = useState(true);
 
     useEffect(() => {
+        setSecondsLeft(isWorkTime ? settings.workTime : settings.shortBreak);
+    }, [settings, isWorkTime]);
+
+    useEffect(() => {
         let timerId;
         if (isRunning) {
             timerId = setInterval(() => {
@@ -60,7 +64,7 @@ function Clock() {
     };
 
     return (
-        <>
+        <div className='base'>
             <div className="container">
                 <div className="clock">
                     {formatTime(secondsLeft)}
@@ -75,7 +79,7 @@ function Clock() {
                 <h4>#{currentPomo}</h4>
                 <span>{isWorkTime ? "Work Time" : (currentPomo % settings.totalPomos === 0 ? "Long Break" : "Short Break")}</span>
             </div>
-        </>
+        </div>
     );
 }
 
