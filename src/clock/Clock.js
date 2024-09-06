@@ -74,10 +74,10 @@ function Clock() {
                     <button onClick={handleStop}>Stop</button>
                     <button onClick={handleReset}>Reset</button>
                 </div>
-            </div>
-            <div className="pomos">
-                <h4>#{currentPomo}</h4>
-                <span>{isWorkTime ? "Work Time" : (currentPomo % settings.totalPomos === 0 ? "Long Break" : "Short Break")}</span>
+                <div className="pomos">
+                    <h4>#{currentPomo}</h4>
+                    <span>{isWorkTime ? "Work Time" : (currentPomo % settings.totalPomos === 0 ? "Long Break" : "Short Break")}</span>
+                </div>
             </div>
         </div>
     );
