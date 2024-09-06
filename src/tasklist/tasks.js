@@ -36,7 +36,7 @@ function Tasks() {
                         <button 
                             className="removeTaskBtn" 
                             onClick={() => removeTask(index)}
-                        >Remove</button>
+                        >X</button>
                     </li>
                 ))}
             </ul>
